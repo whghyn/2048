@@ -90,6 +90,8 @@ var game={
 		var divOver=document.getElementById("gameOver");
 		if(this.state==this.GAMEOVER){
 			divOver.style.display="block";
+			var finalScore=document.getElementById("finalScore");
+			finalScore.innerHTML=this.score;
 		}else{
 			divOver.style.display="none";
 		}
@@ -250,7 +252,7 @@ var game={
 	 	//如果满了，且不能移动！
 	 	if(this.has8192()){ 
 	 		this.state=this.GAMEOVER;
-	 	}else if(this.isFull&&!this.canMove()){
+	 	}else if(this.isFull()&&!this.canMove()){
 	 		this.state=this.GAMEOVER;
 	 	}else{
 	 		this.state=this.PLAYING;
