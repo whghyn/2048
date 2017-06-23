@@ -43,7 +43,7 @@ var game={
 			   	   [0,0,0,0],
 			       [0,0,0,0],
 			       [0,0,0,0]
-//	];
+	];
 //	this.data=[[8,16,8,16],
 //			   	 [8,16,8,16],
 //			       [8,16,8,16],
@@ -146,7 +146,7 @@ var game={
 					col++;
 				}else{
 					col--;
-					if(curr!=0&&prev!=0&&this.data[row][c]!==0){
+					if(curr!=0&&prev!=0&&this.data[row][c]!=0){
 						c--;
 					}
 				}
